@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 
-def add(arg1, arg2):
-	return arg1 + arg2
-
-def subtract(arg1, arg2):
-	return arg1 - arg2
+import operator
 
 OPERATORS = {
 		'+': operator.add,
-		'-': operator.subtract,
+		'-': operator.sub,
 		'*': operator.mul,
 		'/': operator.truediv,
 }
@@ -26,20 +22,11 @@ def calculate(arg):
 			result = operator_fn(arg1, arg2)
 
 			stack.append(result)
-	result stack.pop()
-
-
-		if operand == '+' :
-			stack.append(stack.pop() + stack.pop())
-		else if operand == '-' :
-			stack.append(stack.pop() * -1 + stack.pop())
-		else:
-			stack.append(float(operand))
 	return stack.pop()
 
 def main():
 	while True:
-		result = calculate(input('rpn calc>'))
+		result = calculate(input('rpn calc> '))
 		print("Result: ", result)
 
 if __name__ == '__main__':
