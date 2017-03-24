@@ -5,7 +5,10 @@ python:
 
 install:
  - pip install coverage
+ - pip install colored --upgrade
 
+uninstall:
+ - pip uninstall colored
 
 script: 
  - make test
