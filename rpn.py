@@ -30,5 +30,6 @@ def main():
 		result = calculate(input('rpn calc> '))
 		print("Result: ", result)
 
+
 if __name__ == '__main__':
 	main()
